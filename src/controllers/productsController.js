@@ -47,7 +47,7 @@ const controller = {
 		}
 		products.push(product)
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2), 'utf-8');
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2), 'utf-8')
 
 		res.redirect('/products')
 	},
@@ -72,7 +72,7 @@ const controller = {
 			}
 		});
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2), 'utf-8');
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2), 'utf-8')
 
 		res.redirect('/products')
 	},
@@ -81,7 +81,7 @@ const controller = {
 	destroy: (req, res) => {
 		let productsDeleted = products.filter(product => product.id !== +req.params.id)
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(productsDeleted, null, 2), 'utf-8');
+		fs.writeFileSync(productsFilePath, JSON.stringify(productsDeleted, null, 2), 'utf-8')
 
 		res.redirect('/products')
 	}
